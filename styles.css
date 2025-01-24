@@ -285,5 +285,17 @@ img.car-image {
   .car-headers th:last-child {
     width: 70%;
   }
+
+  .mobile-table .subheader {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .mobile-table .blue-note {
+    font-size: 12px;
+    margin-left: 10px;
+    display: block;
+    margin-top: 5px;
+  }
 }
 
