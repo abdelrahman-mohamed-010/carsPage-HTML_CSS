@@ -233,12 +233,57 @@ img.car-image {
     margin-top: -1px; /* Adjust for border overlap */
   }
 
-  .mobile-table .car-headers th.cost-column {
-    border-right: none;
+  .mobile-table .car-headers th {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
   }
 
-  .mobile-table .car-headers th:last-child {
-    border-left: none;
+  .mobile-table .car-headers {
+    border-bottom: 1px solid #000;
+  }
+
+  /* Remove these rules as they're no longer needed */
+  .mobile-table .car-headers th.cost-column,
+  .mobile-table .car-headers th:last-child,
+  .car-headers th:first-child,
+  .car-headers th:last-child {
+    border: 1px solid #000;
+    width: auto;
+  }
+
+  .mobile-table .car-image-row td {
+    padding: 0;
+  }
+
+  .mobile-table .car-image-cell {
+    width: 100%;
+    padding: 0;
+    height: auto;
+  }
+
+  .mobile-table .car-image {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    object-fit: cover;
+  }
+
+  .mobile-table td:first-child {
+    width: 30%;
+  }
+
+  .mobile-table td:last-child {
+    width: 70%;
+  }
+
+  .car-headers th:first-child {
+    width: 30%;
+  }
+
+  .car-headers th:last-child {
+    width: 70%;
   }
 }
 
