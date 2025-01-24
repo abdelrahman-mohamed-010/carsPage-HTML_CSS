@@ -139,17 +139,106 @@ img.car-image {
   background-color: #e6f3f7;
 }
 
+.mobile-table {
+  display: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.mobile-table .main-header {
+  font-size: 20px;
+  padding-bottom: 12px;
+}
+
+.mobile-table .car-headers th {
+  font-size: 20px;
+}
+
+.mobile-table .cost-data {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.mobile-table .cost-column {
+  width: 40%;
+}
+
+.mobile-table .cost-label {
+  text-align: left;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 10px;
   }
 
   table {
-    font-size: 14px;
+    font-size: 12px;
+    /* display: none !important; */
   }
 
   th,
   td {
     padding: 5px;
   }
+
+  .desktop-table {
+    display: none;
+  }
+
+  .mobile-table {
+    display: table;
+    margin-bottom: 0; /* Remove vertical spacing */
+  }
+
+  .mobile-table .car-image {
+    height: 100%; /* Changed from 150px fixed height */
+    min-height: 150px; /* Added minimum height */
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .mobile-table .car-image-cell {
+    height: 222px; /* Added fixed height to cell */
+    padding: 0;
+  }
+
+  .mobile-table td:first-child {
+    width: 25%; /* Changed from 40% to 25% */
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .mobile-table td:last-child {
+    width: 75%; /* Changed from 60% to 75% */
+  }
+
+  .mobile-table .cost-column {
+    width: 25%; /* Changed from 40% */
+  }
+
+  /* Hide main header for all except first table */
+  /* .mobile-table:not(:first-child) .main-header {
+    display: none;
+  } */
+
+  /* Add top border to tables after first one */
+  .mobile-table:not(:first-child) {
+    border-top: none;
+    margin-top: -1px; /* Adjust for border overlap */
+  }
+
+  .mobile-table .car-headers th.cost-column {
+    border-right: none;
+  }
+
+  .mobile-table .car-headers th:last-child {
+    border-left: none;
+  }
 }
+
