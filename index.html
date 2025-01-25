@@ -9,25 +9,35 @@
   <body>
 
   <div class="btn-holder">
-      <button class="btn"> <a href="#Compact_Sedans">Compact Sedans</a></button>
-  <button class="btn"> <a href="#Coupes">Coupes</a></button>
-  <button class="btn"> <a href="#Hatchbacks">Hatchbacks</a></button>
-  <button class="btn">  <a href="#MidSize&FullSizeSedans">Mid Size & Full Size Sedans</a></button>
-  <button class="btn">  <a href="#Wagons">Wagons</a></button>
-  <button class="btn">  <a href="#luxury">luxury</a></button>
-  <button class="btn">  <a href="#SportsCars">Sports Cars</a></button>
-  <button class="btn">  <a href="#Performance">Performance</a></button>
-  <button class="btn"> <a href="#CompactSUV">Compact SUV</a></button>
-  <button class="btn"><a href="#Mid-SizeSUV">Mid-Size SUV</a></button>
-  <button class="btn"> <a href="#Full-SizeSUV">Full-Size SUV</a></button>
-  <button class="btn"><a href="#CompactTrucks">Compact Trucks</a></button>
-  <button class="btn"><a href="#Mid-SizeTrucks">Mid-Size Trucks</a></button>
-  <button class="btn"><a href="#Full-SizeTrucks">Full-Size Trucks</a></button>
-  <button class="btn"><a href="#Off-Roaders">Off-Roaders</a></button>
-  <button class="btn"><a href="#Vans&Minivans">Vans & Minivans</a></button>
-  <button class="btn"><a href="#Snowflakes">Snowflakes</a></button>
+      <button class="btn" data-target="#Compact_Sedans">Compact Sedans</button>
+  <button class="btn" data-target="#Coupes">Coupes</button>
+  <button class="btn" data-target="#Hatchbacks">Hatchbacks</button>
+  <button class="btn" data-target="#MidSize&FullSizeSedans">Mid Size & Full Size Sedans</button>
+  <button class="btn" data-target="#Wagons">Wagons</button>
+  <button class="btn" data-target="#luxury">luxury</button>
+  <button class="btn" data-target="#SportsCars">Sports Cars</button>
+  <button class="btn" data-target="#Performance">Performance</button>
+  <button class="btn" data-target="#CompactSUV">Compact SUV</button>
+  <button class="btn" data-target="#Mid-SizeSUV">Mid-Size SUV</button>
+  <button class="btn" data-target="#Full-SizeSUV">Full-Size SUV</button>
+  <button class="btn" data-target="#CompactTrucks">Compact Trucks</button>
+  <button class="btn" data-target="#Mid-SizeTrucks">Mid-Size Trucks</button>
+  <button class="btn" data-target="#Full-SizeTrucks">Full-Size Trucks</button>
+  <button class="btn" data-target="#Off-Roaders">Off-Roaders</button>
+  <button class="btn" data-target="#Vans&Minivans">Vans & Minivans</button>
+  <button class="btn" data-target="#Snowflakes">Snowflakes</button>
 
   </div>
+  <script>
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const target = document.querySelector(this.getAttribute('data-target'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
 
 
     <div class="container">
